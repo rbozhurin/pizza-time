@@ -12,8 +12,7 @@ export default class Application extends EventEmitter {
   constructor() {
     super();
 
-    const pizzas = [
-      {
+    const pizzas = [{
         type: Card.types.HAWAIIAN,
         price: 8.99,
       },
@@ -26,27 +25,16 @@ export default class Application extends EventEmitter {
         price: 7.99,
       },
     ];
-<<<<<<< HEAD
-=======
-
-    pizzas.forEach((pizza) => {
-      const card = new Card({ ...pizza });
-      card.render();
-
-      document.querySelector(".main").appendChild(card.container);
-    });
->>>>>>> dev
 
     pizzas.forEach((pizza) => {
       const card = new Card({
-        ...pizza,
+        ...pizza
       });
       card.render();
-      card.on(Card.events.ADD_TO_CART, (obj) => {
-        new Notification().render(obj);
-      });
-      document.querySelector(".main").appendChild(card.container);
-    });
+      card.on(Card.events.ADD_TO_CART,(obj)=>{
+        new Notification().render(obj)})
+        document.querySelector(".main").appendChild(card.container);
+      })
     this.emit(Application.events.READY);
   }
 }
