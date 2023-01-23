@@ -26,6 +26,16 @@ export default class Application extends EventEmitter {
         price: 7.99,
       },
     ];
+<<<<<<< HEAD
+=======
+
+    pizzas.forEach((pizza) => {
+      const card = new Card({ ...pizza });
+      card.render();
+
+      document.querySelector(".main").appendChild(card.container);
+    });
+>>>>>>> dev
 
     pizzas.forEach((pizza) => {
       const card = new Card({

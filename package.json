@@ -67,7 +67,11 @@
   },
   "target": "web",
   "dependencies": {
+<<<<<<< HEAD
     "classnames": "^2.3.2",
+=======
+    "classnames": "^2.3.1",
+>>>>>>> dev
     "eventemitter3": "^4.0.7"
   }
 }
